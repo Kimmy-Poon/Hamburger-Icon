@@ -1,0 +1,54 @@
+.tutor_div{ position: relative; height: 100px; left: 15px; }
+.inline_div{ display: inline-block; position: absolute; }
+.svg_demo{ opacity: 1; left: 0; height: 55px; }
+.svg_demo svg:hover{ cursor: pointer; }
+.bar{ display: none; font-size: 3em; }
+.bar i.fa{ line-height: 55px; }
+ 
+.div_normal{
+	opacity: 0; width: 0%; background-color: #ccc;
+	height: 55px; font-size: 2em;
+	line-height: 55px; text-align: center;
+}
+ 
+.svg_demo svg path.line1st{ d: path('M 5 10 55 10'); }
+.svg_demo svg path.line2nd{ d: path('M 5 25 55 25'); }
+.svg_demo svg path.line3rd{ d: path('M 5 40 55 40'); }
+ 
+.svg_demo.active svg path.line1st,
+.svg_demo.active svg path.line2nd,
+.svg_demo.active svg path.line3rd{
+	opacity: 0;
+}
+ 
+.svg_demo.active svg path.line1st1{ d: path('M 5 10 55 40'); opacity: 1; }
+.svg_demo.active svg path.line2nd1{ d: path('M 5 25 55 25'); opacity: 1; }
+.svg_demo.active svg path.line3rd1{ d: path('M 5 40 55 10'); opacity: 1; }
+ 
+.div_normal.normal{ -webkit-animation: widthdown ease-out 1s; opacity: 0; width: 0%; }
+.div_normal.active{ -webkit-animation: widthup ease-in 1s; opacity: 1; width: 200px; }
+ 
+@-webkit-keyframes widthdown{
+from { width: 200px; opacity: 1; }
+70% { width: 150px; opacity: 0; }
+to { width: 0%; opacity: 0; }
+}
+ 
+@-webkit-keyframes widthup{
+from { width: 0%; opacity: 0; }
+70% { width: 150px; opacity: 0; }
+to { width: 200px; opacity: 1; }
+}
+ 
+.svg_demo.normal{ -webkit-animation: leftdown ease-in 1s; left: 0; }
+.svg_demo.active{ -webkit-animation: leftup ease-in 1s; left: 230px; }
+ 
+@-webkit-keyframes leftdown{
+	from { left: 230px; }
+	to { left: 0; }
+}
+ 
+@-webkit-keyframes leftup{
+	from { left: 0; }
+	to { left: 230px; }
+}
