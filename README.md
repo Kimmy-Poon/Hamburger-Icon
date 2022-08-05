@@ -22,4 +22,4 @@ function isMobile(){
 ```
 This function is used to detect mobile version or not, which is useful if you would like to develop something responsive.
 
-> Just have fun and enjoy yourself! :grin:
+> Easy? and Interesting? Let's DO it. :hand_over_mouth:
